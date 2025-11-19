@@ -1,2 +1,2 @@
 # my-first-repo
-## test
+## this is my CS homework
