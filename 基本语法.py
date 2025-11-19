@@ -1,4 +1,3 @@
-# 导入numpy模块
 import numpy as np
 # 将整数列表转换为NumPy数组
 a = np.array([1,2,3])
@@ -179,6 +178,72 @@ np.hsplit(C, 2)
 # 按垂直方向将数组C切分为两个数组
 np.vsplit(C, 2)
 
+
+# 生成3×3的单位矩阵
+np.eye(3)
+
+
+# 生成对角矩阵
+np.diag([1,2,3,4])
+
+
+# 数组的条件索引
+a = np.array([1,2,3,4,5])
+a[a>2]
+
+
+# 数组的布尔索引
+a = np.array([1,2,3,4,5])
+mask = (a % 2 == 0)
+a[mask]
+
+
+# 数组的累加计算
+a = np.array([1,2,3,4,5])
+np.cumsum(a)
+
+
+# 数组的排序
+a = np.array([3,1,4,1,5,9,2])
+np.sort(a)
+
+
+# 数组的唯一值
+a = np.array([1,2,2,3,3,3,4,4,4,4])
+np.unique(a)
+
+
+# 数组的条件赋值
+a = np.array([1,2,3,4,5])
+a[a<3] = 0
+a
+
+
+# 数组的广播运算
+a = np.array([1,2,3])
+b = np.array([[1],[2],[3]])
+a + b
+
+
+# 数组的统计信息
+a = np.random.randn(100)
+print("均值:", np.mean(a))
+print("标准差:", np.std(a))
+print("最大值:", np.max(a))
+print("最小值:", np.min(a))
+
+
+# 数组的保存与加载
+a = np.array([1,2,3,4,5])
+np.save('array.npy', a)
+b = np.load('array.npy')
+b
+
+
+# 数组的拼接
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+np.concatenate([a,b])
 
 # 导入iris数据集和逻辑回归算法模块
 from sklearn.datasets import load_iris
